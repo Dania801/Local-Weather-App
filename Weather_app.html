@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Local weather</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap and JQuery Library -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <script src="https://use.fontawesome.com/47f1113041.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="pe-icon-set-weather/css/pe-icon-set-weather.css">
+    <link rel="stylesheet" href="pe-icon-set-weather/css/helper.css">
+
+    <!--CSS and JQuery files -->
+    <link rel = "stylesheet" type = "text/css" href = "Weather_design.css" />
+    <script type="text/javascript" src="Weather_code.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="degree-div">
+      <div class="container row">
+        <div class="navbar-header col-xs-10">
+          <a class="navbar-brand" id="title">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Local weather App
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse row col-xs-5">
+          <ul class="nav navbar-nav">
+            <!-- The first three elements are just used for styling the bar -->
+            <li class="disabled"><a href="#"></a></li>
+            <li class="disabled"><a href="#"></a></li>
+
+            <li class="active"><button onclick="convertToCilicius()">C</button></li>
+            <li class="active"><button onclick="convertToFehren()">F</button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+        <div class="container container-fluid" id="top-div">
+          <br /><br />
+          <br /><br />
+          <br /><br />
+          <br /><br />
+          <br /><br />
+          <br />
+          <div class="container container-fluid" id="location-div">
+          </div>
+          <br />
+          <br /><br />
+          <div class="container container-fluid" id="temp-div">
+          </div>
+          <br /><br />
+          <br /><br />
+          <br /><br />
+          <br /><br />
+        </div>
+        <div class="container container-fluid" id="forecast-div">
+        </div>
+  </body>
+</html>
