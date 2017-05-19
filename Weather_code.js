@@ -4,6 +4,7 @@ var currentSnow = 'pe-is-w-snow pe-4x pe-va' ;
 var currentCloud = 'pe-is-w-mostly-cloudy-1 pe-4x pe-va';
 var currentThunder = 'pe-is-w-severe-thunderstorm pe-4x pe-va' ;
 var currentMist = 'pe-is-w-wind-2 pe-4x pe-va';
+var currentMoon = 'pe-is-w-moon-1 pe-4x pe-va' ;
 var forecastRain = 'pe-is-w-rain-1 pe-lg pe-va' ;
 var forecastSnow = 'pe-is-w-snow pe-lg pe-va' ;
 var forecastCload = 'pe-is-w-mostly-cloudy-1 pe-lg pe-va' ;
@@ -172,17 +173,18 @@ function getForecastInFehren(){
           td5.innerHTML =  '<span style="font-size:25px; color:#4CAF50;">' + actualDate2[0] + '</span>' ;
 
           var td1 = tr.insertCell();
-          td1.style.fontSize = '20px' ;
+          td1.style.fontSize = '16px' ;
           td1.appendChild(document.createTextNode(newTemp));
           td1.innerHTML = newTemp + " &deg;F";
 
           var td6 = tr.insertCell();
-          td6.style.fontSize = '20px';
+          td6.style.fontSize = '16x';
+
           td6.innerHTML = '<span class="'+chooseForecastIcon(newIcon)+'"></span>' ;
 
 
           var td2 = tr.insertCell();
-          td2.style.fontSize = '20px' ;
+          td2.style.fontSize = '16px' ;
           td2.innerHTML = newWind + '<span style="font-size:12px;color:lightblue"> mph </span>' ;
 
 
@@ -193,6 +195,7 @@ function getForecastInFehren(){
 
           var td4 = tr.insertCell();
           td4.style.fontWeight = 'bold';
+          td4.style.fontSize = "20px" ;
           td4.appendChild(document.createTextNode(newDesc));
         }
         div.appendChild(tbl);
@@ -224,16 +227,20 @@ function displayCurrentWeatherInFehren(temp , humidity , wind , desc , icon){
 function chooseCurrentIcon(iconID){
   var actualIcon = "" ;
   switch (iconID) {
-    case "01n":
+    case "01d":
       actualIcon = currentSun ;
       break;
     case "02n":
     case "03n":
     case "04n":
+    case "03d":
       actualIcon = currentCloud ;
       break ;
     case "09n":
     case "10n":
+    case "10d":
+    case "13d":
+    case "09d":
       actualIcon = currentRain ;
       break ;
     case "11n":
@@ -252,7 +259,7 @@ function chooseCurrentIcon(iconID){
 function chooseForecastIcon(iconID){
   var actualIcon = "" ;
   switch (iconID) {
-    case "01n":
+    case "01d":
       actualIcon = forecastSun ;
       break;
     case "02n":
@@ -262,6 +269,9 @@ function chooseForecastIcon(iconID){
       break ;
     case "09n":
     case "10n":
+    case "10d":
+    case "13d":
+    case "09d":
       actualIcon = forecastRain ;
       break ;
     case "11n":
